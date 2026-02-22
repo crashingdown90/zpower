@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { Instagram, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
 
 export default function Footer() {
@@ -21,39 +22,39 @@ export default function Footer() {
                             Proposal kolaborasi strategis HIPMI Jawa Tengah × Zilenial Jateng untuk transformasi ekonomi menuju Indonesia Emas 2045.
                         </p>
                         <div className="footer-socials" style={{ marginTop: '1.5rem' }}>
-                            <a href="#" aria-label="Instagram"><Instagram size={18} /></a>
-                            <a href="#" aria-label="LinkedIn"><Linkedin size={18} /></a>
-                            <a href="#" aria-label="Email"><Mail size={18} /></a>
+                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><Instagram size={18} /></a>
+                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><Linkedin size={18} /></a>
+                            <a href="mailto:kolaborasi@hipmizpower.id" aria-label="Email"><Mail size={18} /></a>
                         </div>
                     </div>
 
                     <div className="footer-col">
                         <h4>Program</h4>
-                        <a href="/#program">HIPMI Brand Lab</a>
-                        <a href="/#program">HIPMI Z-Connect</a>
-                        <a href="/#program">HIPMI Z-Talent</a>
-                        <a href="/#timeline">Timeline</a>
+                        <Link href="/#program">HIPMI Brand Lab</Link>
+                        <Link href="/#program">HIPMI Z-Connect</Link>
+                        <Link href="/#program">HIPMI Z-Talent</Link>
+                        <Link href="/#timeline">Timeline</Link>
                     </div>
 
                     <div className="footer-col">
                         <h4>Proposal</h4>
-                        <a href="/events">Event & Dokumentasi</a>
-                        <a href="/mockup">Mockup Z-Talent</a>
-                        <a href="/pendanaan">Pendanaan</a>
-                        <a href="/pengembangan">Pengembangan</a>
+                        <Link href="/events">Event & Dokumentasi</Link>
+                        <Link href="/mockup">Mockup Z-Talent</Link>
+                        <Link href="/pendanaan">Pendanaan</Link>
+                        <Link href="/pengembangan">Pengembangan</Link>
                     </div>
 
                     <div className="footer-col">
                         <h4>Kontak</h4>
-                        <a href="#" style={{ display: 'flex', alignItems: 'start', gap: '0.5rem' }}>
+                        <span style={{ display: 'flex', alignItems: 'start', gap: '0.5rem' }}>
                             <MapPin size={14} style={{ marginTop: '3px', flexShrink: 0 }} />
                             Semarang, Jawa Tengah
-                        </a>
-                        <a href="#" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                        </span>
+                        <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                             <Phone size={14} style={{ flexShrink: 0 }} />
                             (024) xxxx-xxxx
-                        </a>
-                        <a href="#" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                        </span>
+                        <a href="mailto:kolaborasi@hipmizpower.id" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                             <Mail size={14} style={{ flexShrink: 0 }} />
                             kolaborasi@hipmizpower.id
                         </a>

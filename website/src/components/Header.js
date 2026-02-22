@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Menu, X, ChevronDown, Camera, Smartphone, Wallet, Rocket, Heart, Target } from 'lucide-react';
 
 export default function Header() {
@@ -44,7 +45,7 @@ export default function Header() {
         <>
             <header className={`header ${scrolled ? 'scrolled' : ''}`}>
                 <div className="container header-inner">
-                    <a href="/" className="logo">
+                    <Link href="/" className="logo">
                         <Image
                             src="/images/logo-collab.png"
                             alt="HIPMI Z-POWER — Kolaborasi HIPMI × Zilenial"
@@ -54,11 +55,11 @@ export default function Header() {
                             priority
                         />
                         <span className="logo-brand">HIPMI <span className="text-gradient">Z-POWER</span></span>
-                    </a>
+                    </Link>
 
                     <nav className="nav-links">
                         {mainLinks.map(l => (
-                            <a key={l.href} href={l.href}>{l.label}</a>
+                            <Link key={l.href} href={l.href}>{l.label}</Link>
                         ))}
                         <div className="nav-dropdown" ref={dropdownRef}>
                             <button
@@ -70,14 +71,14 @@ export default function Header() {
                             {dropdownOpen && (
                                 <div className="nav-dropdown-menu">
                                     {moreLinks.map(l => (
-                                        <a key={l.href} href={l.href} onClick={() => setDropdownOpen(false)}>{l.icon}{l.label}</a>
+                                        <Link key={l.href} href={l.href} onClick={() => setDropdownOpen(false)}>{l.icon}{l.label}</Link>
                                     ))}
                                 </div>
                             )}
                         </div>
-                        <a href="/#gabung" className="btn btn-primary" style={{ padding: '0.6rem 1.4rem', fontSize: '0.875rem' }}>
+                        <Link href="/#gabung" className="btn btn-primary" style={{ padding: '0.6rem 1.4rem', fontSize: '0.875rem' }}>
                             Unduh Proposal
-                        </a>
+                        </Link>
                     </nav>
 
                     <button
@@ -92,19 +93,19 @@ export default function Header() {
 
             <div className={`mobile-nav ${mobileOpen ? 'active' : ''}`}>
                 {mainLinks.map(l => (
-                    <a key={l.href} href={l.href} onClick={() => setMobileOpen(false)}>
+                    <Link key={l.href} href={l.href} onClick={() => setMobileOpen(false)}>
                         {l.label}
-                    </a>
+                    </Link>
                 ))}
                 <div className="mobile-nav-divider"></div>
                 {moreLinks.map(l => (
-                    <a key={l.href} href={l.href} onClick={() => setMobileOpen(false)} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                    <Link key={l.href} href={l.href} onClick={() => setMobileOpen(false)} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                         {l.icon}{l.label}
-                    </a>
+                    </Link>
                 ))}
-                <a href="/#gabung" className="btn btn-primary" style={{ textAlign: 'center', marginTop: '1rem' }}>
+                <Link href="/#gabung" className="btn btn-primary" style={{ textAlign: 'center', marginTop: '1rem' }}>
                     Unduh Proposal
-                </a>
+                </Link>
             </div>
         </>
     );

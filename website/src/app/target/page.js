@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ScrollReveal from '@/components/ScrollReveal';
@@ -135,7 +136,7 @@ export default function TargetPage() {
             <main>
                 <section className="page-hero">
                     <div className="container">
-                        <a href="/" className="back-link"><ArrowLeft size={16} /> Kembali ke Beranda</a>
+                        <Link href="/" className="back-link"><ArrowLeft size={16} /> Kembali ke Beranda</Link>
                         <span className="section-badge"><Target size={14} /> SASARAN & KPI</span>
                         <h1 className="page-hero-title">Target <span className="text-gradient">Capaian</span> 2025–2029</h1>
                         <p className="page-hero-desc">

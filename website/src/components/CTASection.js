@@ -1,5 +1,6 @@
 import { ArrowRight, Mail, FileDown, Calendar } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function CTASection() {
     return (
@@ -21,14 +22,14 @@ export default function CTASection() {
                         Jateng Makmur menuju Indonesia Emas 2045.
                     </p>
                     <div className="cta-actions">
-                        <a href="#" className="btn btn-white">
+                        <Link href="/#gabung" className="btn btn-white">
                             <FileDown size={18} />
                             Download Proposal
-                        </a>
-                        <a href="#" className="btn btn-outline" style={{ borderColor: 'rgba(255,255,255,0.3)', color: 'white' }}>
+                        </Link>
+                        <Link href="/#gabung" className="btn btn-outline" style={{ borderColor: 'rgba(255,255,255,0.3)', color: 'white' }}>
                             <Calendar size={18} />
                             Jadwalkan Pertemuan
-                        </a>
+                        </Link>
                     </div>
                     <div className="cta-contact">
                         <Mail size={14} />

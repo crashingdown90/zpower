@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Image from 'next/image';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -70,7 +71,7 @@ export default function EventsPage() {
                 {/* Hero */}
                 <section className="page-hero">
                     <div className="container">
-                        <a href="/" className="back-link"><ArrowLeft size={16} /> Kembali ke Beranda</a>
+                        <Link href="/" className="back-link"><ArrowLeft size={16} /> Kembali ke Beranda</Link>
                         <span className="section-badge"><Camera size={14} /> DOKUMENTASI</span>
                         <h1 className="page-hero-title">Event & <span className="text-gradient">Dokumentasi</span></h1>
                         <p className="page-hero-desc">

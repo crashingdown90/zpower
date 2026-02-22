@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ScrollReveal from '@/components/ScrollReveal';
@@ -66,7 +67,7 @@ export default function PendanaanPage() {
                 {/* Hero */}
                 <section className="page-hero">
                     <div className="container">
-                        <a href="/" className="back-link"><ArrowLeft size={16} /> Kembali ke Beranda</a>
+                        <Link href="/" className="back-link"><ArrowLeft size={16} /> Kembali ke Beranda</Link>
                         <span className="section-badge"><DollarSign size={14} /> PENDANAAN</span>
                         <h1 className="page-hero-title">Mekanisme <span className="text-gradient">Pendanaan</span></h1>
                         <p className="page-hero-desc">
